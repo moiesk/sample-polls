@@ -8,7 +8,7 @@ def main(args):
   p = urlparse(dbUrl)
 
   pg_connection_dict = {
-    'dbname': p.path.strip(),
+    'dbname': p.path.strip("/"),
     'user': p.username,
     'password': p.password,
     'port': p.port,
@@ -28,7 +28,6 @@ def main(args):
 
   return {
     'body': {
-      'response_type': 'in_channel',
-      'question_count': result['count']
+      'question_count': result[0]
     }
   }
