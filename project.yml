@@ -1,0 +1,18 @@
+targetNamespace: ''
+parameters: {}
+packages:
+  - name: polls
+    environment: 
+      DATABASE_URL: "${DATABASE_URL}"
+    parameters: {}
+    annotations: {}
+    actions:
+      - name: list
+        binary: false
+        main: ''
+        runtime: 'python:default'
+        web: true
+        parameters: {}
+        environment: {}
+        annotations: {}
+        limits: {}
